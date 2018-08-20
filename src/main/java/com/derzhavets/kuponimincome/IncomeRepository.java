@@ -10,4 +10,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface IncomeRepository extends PagingAndSortingRepository<Income, Long>{
 	
 	List<Income> findByAmount(@Param("amount") Double amount);
+	
+	List<Income> findByClient(@Param("client") String client); 
+	
 }
